@@ -24,3 +24,33 @@ var_float = 10.2
 print("Type of var_char: ", type(var_float))
 var_string = 'Hello'
 print("Type of var_string: ", type(var_string))
+
+# Define the local and Global variables with the same name and print both variables and
+# understand the scope of the variable
+
+
+a = 5  # global variable
+
+
+def f():
+    print('Inside f() : ', a)
+
+
+f()
+
+
+def g():
+    b = 2  # local variable
+    print('Inside g() : ', b)
+
+
+g()
+
+
+def h():
+    global c
+    c = 4
+
+
+h()
+print(c)
